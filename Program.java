@@ -81,6 +81,8 @@ public class Program {
 			int median = calculateMedian(prices);
 			StringBuffer content = new StringBuffer();
 			content.append(carriers.printInfo());
+			content.append("\nСредняя цена: " + averagePrice);
+			content.append(", медиана: " + median);
 			content.append("\nРазница между средней ценой и медианой: " + (averagePrice-median));
 			writeToFile(resultsfile, content.toString());
 			System.out.println("Completed successfully!");
